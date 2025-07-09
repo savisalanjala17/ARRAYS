@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc= new Scanner (System.in);
+        int[][] a = new int [3][3];
+        System.out.println(" ENTER ARRAY ELEMENTS : ");
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a[0].length;j++){
+                a[i][j]=sc.nextInt();
+            }
+ 
+        }
+ 
+        System.out.println();
+        System.out.println(" REVERSE OF MATRIX : ");
+        for(int i=0;i<a.length;i++){
+            for(int j=a[0].length-1;j>=0;j--){
+                System.out.print(a[i][j] + " ");
+ 
+                }
+                System.out.println();
+ 
+            }
+ 
+ 
+    }
+}
