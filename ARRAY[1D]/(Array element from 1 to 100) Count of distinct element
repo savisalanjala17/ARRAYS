@@ -1,0 +1,34 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc =new Scanner (System.in);
+        System.out.println("ENTER ARRAY 1 ELEMENTS: ");
+        int []a1=new int [6];
+ 
+ 
+        for(int i=0;i<a1.length;i++){
+            a1[i]=sc.nextInt();
+ 
+        }
+ 
+    boolean vis []= new boolean[10];
+    Arrays.fill(vis,false);
+    int count=0;
+ 
+ 
+ 
+        for(int i=0;i<a1.length;i++){
+            if(vis[a1[i]]==false){
+                count++;
+                vis[a1[i]]=true;
+            }
+ 
+        }
+ 
+ 
+        System.out.println(" NO OF DISTIMCT ELEMENTS : " + count);
+ 
+ 
+    }
+}
