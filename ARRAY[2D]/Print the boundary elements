@@ -1,0 +1,31 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc= new Scanner (System.in);
+        int[][] a = new int [3][3];
+        System.out.println(" ENTER ARRAY ELEMENTS : ");
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a[0].length;j++){
+                a[i][j]=sc.nextInt();
+            }
+ 
+        }
+ 
+        System.out.println();
+        System.out.println("BOUNDARY ELEMENTS ARE : ");
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a[0].length;j++){
+                if(i==0 || j==0 || i==a.length-1 || j==a[0].length-1){
+                System.out.print(a[i][j] + " ");
+ 
+                }
+ 
+            }
+ 
+        }
+ 
+ 
+ 
+    }
+}
