@@ -1,0 +1,54 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+    public static void main(String [] args){
+        Scanner sc= new Scanner (System.in);
+        int[][] a = new int [3][3];
+        System.out.println(" ENTER ARRAY ELEMENTS : ");
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a[0].length;j++){
+                a[i][j]=sc.nextInt();
+            }
+ 
+        }
+        int rightsum=0;
+        int leftsum=0;
+        System.out.println();
+        System.out.println("LEFT DIAGONAL ELEMENTS ARE : ");
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a[0].length;j++){
+                if(i==j){
+                System.out.print(a[i][j] + " ");
+                leftsum+=a[i][j];
+                }
+ 
+            }
+ 
+        }
+ 
+        System.out.println();
+        System.out.println("RIGHT DIAGONAL ELEMENTS ARE : ");
+        for(int i=0;i<a.length;i++){
+            for(int j=0;j<a[0].length;j++){
+                if((i+j)==a.length-1 && i!=j){
+                System.out.print(a[i][j] + " ");
+                rightsum+=a[i][j];
+                }
+            }
+ 
+ 
+        }
+ 
+ 
+    System.out.println();    
+    System.out.println("DIFFERENCE BETWEEN DIAGNOLS ARE : ");    
+    if(leftsum>rightsum){
+        System.out.println(leftsum-rightsum);
+    }
+    else{
+        System.out.println(rightsum-leftsum);
+ 
+    }
+ 
+    }
+}
