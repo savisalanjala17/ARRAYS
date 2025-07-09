@@ -1,0 +1,44 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc =new Scanner (System.in);
+        System.out.println("ENTER ARRAY 1 ELEMENTS: ");
+        int []a1=new int [6];
+ 
+ 
+        for(int i=0;i<a1.length;i++){
+            a1[i]=sc.nextInt();
+ 
+        }
+ 
+ 
+ 
+        int sum=0;
+        int even_sum=0;
+        int odd_sum=0;
+ 
+ 
+        for(int i=0;i<a1.length-2;i++){
+            for(int j=i+1;j<a1.length-1;j++){
+                for(int k=j+1;k<a1.length;k++){
+                    sum=a1[i]+a1[j]+a1[k];
+                    if(sum%2==0){
+                        even_sum++;
+                    }
+                    else{
+                        odd_sum++;
+                    }
+ 
+                }
+ 
+            }
+        }
+ 
+ 
+        System.out.println(" NO OF EVEN TRIPLET SUM : " + even_sum);
+        System.out.println(" NO OF ODD TRIPLET SUM : " + odd_sum);
+ 
+ 
+    }
+}
