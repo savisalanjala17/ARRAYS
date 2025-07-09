@@ -1,0 +1,42 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc =new Scanner (System.in);
+        System.out.println("ENTER ARRAY 1 ELEMENTS: ");
+        int []a1=new int [6];
+ 
+ 
+        for(int i=0;i<a1.length;i++){
+            a1[i]=sc.nextInt();
+ 
+        }
+ 
+    boolean vis []= new boolean[10];
+    Arrays.fill(vis,false);
+    int count=0;
+ 
+ 
+ 
+        for(int i=0;i<a1.length;i++){
+            if(vis[a1[i]]==false){
+                count=1;
+                for(int j=i+1;j<a1.length;j++){
+                    if(a1[i]==a1[j]){
+                        vis[a1[j]]=true;
+                        count++;
+                    }
+ 
+            }
+             System.out.println(a1[i]+ "-->" +count) ;       
+        }
+ 
+ 
+    }
+ 
+ 
+ 
+ 
+ 
+    }
+}
