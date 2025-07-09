@@ -1,0 +1,39 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc =new Scanner (System.in);
+        System.out.println("ENTER ARRAY 1 ELEMENTS: ");
+        int []a1=new int [4];
+        int []a2=new int [4];
+ 
+        for(int i=0;i<a1.length;i++){
+            a1[i]=sc.nextInt();
+ 
+        }
+ 
+ 
+        System.out.println("ENTER ARRAY 2 ELEMENTS: ");
+ 
+        for(int i=0;i<a2.length;i++){
+            a2[i]=sc.nextInt();
+ 
+        }
+ 
+        int sum=0;
+        int max_sum=0;
+ 
+        for(int i=0;i<a1.length;i++){
+            for(int j=0;j<a2.length;j++){
+                sum=a1[i]+a2[j];
+                max_sum=Math.max(max_sum,sum);
+            }
+ 
+        }
+ 
+ 
+        System.out.println(" MAXIMUM PAIR SUM FROM TWO ARRAY : " + max_sum);
+ 
+ 
+    }
+}
