@@ -1,0 +1,33 @@
+import java.util.*;
+public class Main{
+    public static void main(String args []){
+        Scanner sc= new Scanner (System.in);
+        int n= sc.nextInt();
+        int a[]=new int [n];
+     
+    
+        
+        for(int i=0;i<n;i++){
+            a[i]=sc.nextInt();
+            }
+            
+           
+        
+       int[] freq = new int[101]; // size depends on max element
+       for (int i = 0; i < a.length; i++) {
+            freq[a[i]]++;
+}
+
+       for (int i = 0; i < freq.length; i++) {
+    if (freq[i] > 0) {
+        System.out.println("Element " + i + " occurs " + freq[i] + " times");
+    }
+}
+
+
+
+
+            
+       
+    }
+}
