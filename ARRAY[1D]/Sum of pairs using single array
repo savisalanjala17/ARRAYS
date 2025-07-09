@@ -1,0 +1,26 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc =new Scanner (System.in);
+        System.out.println("ENTER ARRAY ELEMENTS: ");
+        int []a1=new int [4];
+        for(int i=0;i<a1.length;i++){
+            a1[i]=sc.nextInt();
+ 
+        }
+        int sum=0;
+ 
+        for(int i=0;i<a1.length;i++){
+            for(int j=i+1;j<a1.length;j++){
+                sum+=a1[i]+a1[j];
+            }
+ 
+        }
+ 
+ 
+        System.out.println("SUM OF PAIRS USING SINGLE ARRAY : " + sum);
+ 
+ 
+    }
+}
