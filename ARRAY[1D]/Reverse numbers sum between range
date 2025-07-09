@@ -1,0 +1,36 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+    public static void main(String args[]){
+        Scanner sc =new Scanner (System.in);
+        System.out.println("ENTER THE START : ");
+        int S =sc.nextInt();
+        System.out.println("ENTER THE END : ");
+        int E =sc.nextInt();
+        int sum=0;
+        System.out.print("SUM AFTER REVERSING : ");
+        for(int i=S;i<=E;i++){
+            int rem=0;
+            int rev=0;
+            int n=i;
+            while(n>0){
+                rem=n%10;
+                rev=rev*10+rem;
+                n=n/10;
+ 
+            }
+            sum+=rev;
+ 
+ 
+        }
+ 
+ 
+ 
+    System.out.println(sum);
+ 
+ 
+ 
+ 
+ 
+    }
+}
